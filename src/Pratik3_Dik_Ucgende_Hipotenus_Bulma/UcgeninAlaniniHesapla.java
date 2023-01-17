@@ -8,7 +8,7 @@ public class UcgeninAlaniniHesapla {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double x,y,z;
-        System.out.println("Üçgenin kenar uzunluklarını giriniz: ");
+        System.out.println("Üçgenin kenar uzunluklarını giriniz : ");
         x = scanner.nextDouble();
         y = scanner.nextDouble();
         z = scanner.nextDouble();
