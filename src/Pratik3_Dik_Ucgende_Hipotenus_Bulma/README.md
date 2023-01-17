@@ -6,7 +6,7 @@ Java ile kullanıcıdan dik kenarlarının uzunluğunu alan ve hipotenüsü hesa
 Üç kenar uzunluğunu kullanıcıdan aldığınız üçgenin alanını hesaplayan programı yazınız.
 
 Formül
-Üç𝑔𝑒𝑛𝑖𝑛 ç𝑒𝑣𝑟𝑒𝑠𝑖 = 2𝑢
+Üç𝑔𝑒𝑛𝑖𝑛 ç𝑒𝑣𝑟𝑒𝑠𝑖 = 2
 
 𝑢 = (a+b+c) / 2
 
