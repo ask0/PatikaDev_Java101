@@ -1,4 +1,4 @@
-package Pratik10_KullaniciGirisi;
+package Pratik_10_KullaniciGirisi;
 
 import java.util.Scanner;
 
