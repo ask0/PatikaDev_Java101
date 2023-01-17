@@ -25,23 +25,23 @@ public class JavaDatatypes {
             }
         }
 
-        /* If-Else olmadan
-        Scanner scanner = new Scanner(System.in);
-        int t = scanner.nextInt();
-        String output="";
-        for(int i=0; i<t; i++){
-            try{
-                long n = scanner.nextLong();
-                output = (n>=-128 && n<=127) ? output+="* byte\n" : "";
-                output = (n>=-Math.pow(2,15) && n<=Math.pow(2,15)-1) ? output+="* short\n" : "";
-                output = (n>=-Math.pow(2,31) && n<=Math.pow(2,31)-1) ? output+="* int\n" : "";
-                output = (n>=-Math.pow(2,63) && n<=Math.pow(2,63)-1) ? output+="* long\n" : "";
-                System.out.println(n + " can be fitted in:\n" + output);
-            }
-            catch (Exception e){
-                System.out.println(scanner.next() + " can't be fit anywhere.\n");
-            }
-        }
+        /*
+          Scanner sc = new Scanner(System.in);
+          int t = sc.nextInt();
+
+          for (int i = 0; i < t; i++) {
+           try {
+            long x = sc.nextLong();
+            System.out.println(x + " can be fitted in:");
+            if (x >= Byte.MIN_VALUE && x <= Byte.MAX_VALUE) System.out.println("* byte");
+            if (x >= Short.MIN_VALUE && x <= Short.MAX_VALUE) System.out.println("* short");
+            if (x >= Integer.MIN_VALUE && x <= Integer.MAX_VALUE) System.out.println("* int");
+            if (x >= Long.MIN_VALUE && x <= Long.MAX_VALUE) System.out.println("* long");
+           } catch (Exception e) {
+            System.out.println(sc.next() + " can't be fitted anywhere.");
+           }
+          }
+          sc.close();
         */
     }
 
