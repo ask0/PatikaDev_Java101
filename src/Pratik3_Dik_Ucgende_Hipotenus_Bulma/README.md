@@ -1,4 +1,5 @@
 # Dik Üçgende Hipotenüs Bulan Program
+
 ```
 Java ile kullanıcıdan dik kenarlarının uzunluğunu alan ve hipotenüsü hesaplayan programı yazın.
 
@@ -10,5 +11,5 @@ Formül
 
 𝑢 = (a+b+c) / 2
 
-Alan * Alan = 𝑢 * (𝑢 − 𝑎)* (𝑢 − 𝑏) * (𝑢 − 𝑐) 
+Alan * Alan = 𝑢 * (𝑢 − 𝑎)* (𝑢 − 𝑏) * (𝑢 − 𝑐)
 ```
