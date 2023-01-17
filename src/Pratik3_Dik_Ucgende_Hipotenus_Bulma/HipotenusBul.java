@@ -12,6 +12,7 @@ public class HipotenusBul {
         System.out.println("Üçgenin ikinci kenarı: ");
         y = scanner.nextDouble();
         double hipotenus = sqrt(x*x + y*y);
-        System.out.println("Hipotenusu= " + hipotenus);
+        System.out.println("Hipotenüs= " + hipotenus);
+
     }
 }
