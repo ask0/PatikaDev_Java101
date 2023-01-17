@@ -1,4 +1,4 @@
-package Pratik3_Taksimetre_Programi;
+package Pratik4_Taksimetre_Programi;
 
 import java.util.Scanner;
 
