@@ -15,6 +15,6 @@ public class UcgeninAlaniniHesapla {
         double u = (x+y+z)/2;
         double cevre = 2*u;
         double alan = sqrt(u*(u-x)*(u-y)*(u-z));
-        System.out.println("Çevresi: " + cevre + "\nAlanı: " + alan);
+        System.out.println("Çevresi: " + cevre + "\nAlanı:  " + alan);
     }
 }

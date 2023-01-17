@@ -15,7 +15,7 @@ public class NotOrtalamasi {
         tr = scanner.nextDouble();
         System.out.println("Tarih notunuz: ");
         tar = scanner.nextDouble();
-        System.out.println("Müzik notunuz: ");
+        System.out.println("Müzik notunuz:  ");
         muz = scanner.nextDouble();
 
         double ort = (mat + fiz + kim + tr + tar + muz)/6;
