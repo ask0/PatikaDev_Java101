@@ -2,7 +2,7 @@ package Pratik_19_CiftSayiToplam;
 
 import java.util.Scanner;
 
-public class CiftSayiToplam {
+public class Mod3ve4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int sayi, top = 0, adet = 0, ort;

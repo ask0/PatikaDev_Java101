@@ -1,4 +1,4 @@
-# Girilen Sayıya Kadar Olan Çift Sayıları Bulan Program
+# 3 ve 4'e Tam Bölünebilen Sayılar
 
 ---
 
