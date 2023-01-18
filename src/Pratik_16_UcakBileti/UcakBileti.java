@@ -39,8 +39,8 @@ public class UcakBileti {
                 System.out.println("Tür 1 ya da 2 olmalı.");
                 isError = true;
             }
-
             if(type == 2){
+                toplam *= 2;
                 toplam *= 0.8;
             }
 
