@@ -1,4 +1,4 @@
-package Pratik_30_MukemmelSayi.README;
+package Pratik_30_MukemmelSayi;
 
 import java.util.Scanner;
 
