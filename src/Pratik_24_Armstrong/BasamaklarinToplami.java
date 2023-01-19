@@ -8,12 +8,10 @@ public class BasamaklarinToplami {
         int sayi;
         System.out.println("Bir sayı girin: ");
         sayi = scanner.nextInt();
-        int basamak = 1;
-        int islem = sayi / basamak;
+        int islem = sayi;
         int toplam = 0;
         while (islem != 0) {
             toplam += islem % 10;
-            basamak *= 10;
             islem /= 10;
         }
         System.out.println("Sayı değerleri toplamı: " + toplam);
