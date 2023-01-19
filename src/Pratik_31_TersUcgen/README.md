@@ -17,9 +17,9 @@ Basamak Sayısı : 10
          ***
           *
 ```
-![Çözüm](https://i.hizliresim.com/oo672wf.png)
+![Çözüm](https://i.hizliresim.com/eusaatm.png)
 
 ```
-Yıldız -> row*2-i
-Boşluk -> row*2-(2*i)+1
+Yıldız -> row*2-(2*i)+1
+Boşluk -> i
 ```
