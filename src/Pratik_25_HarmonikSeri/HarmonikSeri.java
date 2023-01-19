@@ -1,4 +1,4 @@
-package Pratik_26_HarmonikSeri;
+package Pratik_25_HarmonikSeri;
 
 import java.util.Scanner;
 
