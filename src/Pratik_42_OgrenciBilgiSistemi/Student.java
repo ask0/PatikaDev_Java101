@@ -23,6 +23,7 @@ public class Student {
         calcAvarage();
         this.isPass = false;
     }
+
     public void addBulkExamNote(int mat, int fizik, int kimya, int dbms) {
 
         if (mat >= 0 && mat <= 100) {
@@ -65,7 +66,7 @@ public class Student {
 
     public void isPass() {
         if (this.mat.note == 0 || this.fizik.note == 0 || this.kimya.note == 0 || this.dbms.note == 0 || this.mat.note2 == 0 || this.fizik.note2 == 0 || this.kimya.note2 == 0 || this.dbms.note2 == 0) {
-            System.out.println("Notlar tam olarak girilmemiş");
+            System.out.println("=========================\nYazılı hatalı girilmiş\n");
         } else {
             this.isPass = isCheckPass();
             printNote();

@@ -13,6 +13,7 @@ public class Course {
         this.code = code;
         this.prefix = prefix;
         this.note = 0;
+        this.note2 = 0;
     }
 
     public void addTeacher(Teacher t) {

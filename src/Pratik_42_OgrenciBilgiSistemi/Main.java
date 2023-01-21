@@ -20,12 +20,13 @@ public class Main {
         dbms.addTeacher(t4);
 
         Student s1 = new Student("İnek Şaban", 4, "140144015", mat, fizik, kimya, dbms);
-        s1.addBulkExamNote(50, 20, 40, 60);
-        s1.addBulkVerbalNotes(100,100,100,100);
+        s1.addBulkExamNote(100, 20, 40, 60);
+        s1.addBulkVerbalNotes(10, 100, 100, 100);
         s1.isPass();
 
         Student s2 = new Student("Güdük Necmi", 4, "2211133", mat, fizik, kimya, dbms);
-        s2.addBulkExamNote(100, 50, 40, 50);
+        s2.addBulkExamNote(0, 50, 40, 50);
+        s2.addBulkVerbalNotes(10, 100, 100, 100);
         s2.isPass();
 
         Student s3 = new Student("Hayta İsmail", 4, "221121312", mat, fizik, kimya, dbms);
