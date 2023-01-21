@@ -31,10 +31,12 @@ public class Main {
 
         Student s3 = new Student("Hayta İsmail", 4, "221121312", mat, fizik, kimya, dbms);
         s3.addBulkExamNote(50, 20, 40, 76);
+        s3.addBulkVerbalNotes(60, 50, 10, 70);
         s3.isPass();
 
         Student s4 = new Student("Akın", 4, "21321321", mat, fizik, kimya, dbms);
         s4.addBulkExamNote(90, 50, 40, 100);
+        s4.addBulkVerbalNotes(60, 70, 80, 76);
         s4.isPass();
 
         dbms.printTeacher();
