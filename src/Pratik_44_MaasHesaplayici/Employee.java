@@ -31,24 +31,23 @@ public class Employee {
         int fark = 2021 - this.hireYear;
         if (fark < 10)
             return this.salary * 0.05;
-        else if(fark > 9 && fark < 20)
+        else if (fark > 9 && fark < 20)
             return this.salary * 0.1;
-        else if(fark > 19)
+        else if (fark > 19)
             return this.salary * 0.15;
         return -1;
     }
 
     @Override
     public String toString() {
-        System.out.println("Adı: " + this.name);
-        System.out.println("Maaşı: " + this.salary);
-        System.out.println("Çalışma Saati: " + this.workHours);
-        System.out.println("Başlangıç Tarihi: " + this.hireYear);
-        System.out.println("Vergi: " + this.tax());
-        System.out.println("Bonus: " + this.bonus());
-        System.out.println("Maaş Artışı: " + this.raiseSalary());
-        System.out.println("Vergi ve Bonuslar ile birlikte maaş: " + (this.salary - this.tax() + this.bonus()));
-        System.out.println("Toplam Maaş: " + (this.salary + this.raiseSalary()));
-        return null;
+        return "Adı: " + this.name +
+                "\nMaaşı: " + this.salary +
+                "\nÇalışma Saati: " + this.workHours +
+                "\nBaşlangıç Tarihi: " + this.hireYear +
+                "\nVergi: " + this.tax() +
+                "\nBonus: " + this.bonus() +
+                "\nMaaş Artışı: " + this.raiseSalary() +
+                "\nVergi ve Bonuslar ile birlikte maaş: " + (this.salary - this.tax() + this.bonus()) +
+                "\nToplam Maaş: " + (this.salary + this.raiseSalary());
     }
 }

@@ -11,21 +11,21 @@ public class Main {
         int saat;
         int yil;
         System.out.println("########################");
-        System.out.println("Eleman adı: ");
+        System.out.print("Eleman adı: ");
         ad = scanner.nextLine();
-        System.out.println("Eleman maaşı: ");
+        System.out.print("Eleman maaşı: ");
         maas = scanner.nextDouble();
-        System.out.println("Çalışma saati: ");
+        System.out.print("Çalışma saati: ");
         saat = scanner.nextInt();
-        System.out.println("İşe girme yılı:(<2021)");
+        System.out.print("İşe girme yılı:(<2021): ");
         yil = scanner.nextInt();
         Employee eleman = new Employee(ad, maas, saat, yil);
-        eleman.toString();
+        System.out.println(eleman.toString());
     }
 
     public static void main(String[] args) {
         Employee e1 = new Employee("Mark", 2000, 45, 1985);
-        e1.toString();
+        System.out.println(e1.toString());
 
         maasHesapla();
     }
