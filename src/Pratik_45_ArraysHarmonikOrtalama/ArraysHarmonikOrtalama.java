@@ -1,16 +1,16 @@
 package Pratik_45_ArraysHarmonikOrtalama;
 
-import java.util.Scanner;
-
+import java.util.Arrays;
 public class ArraysHarmonikOrtalama {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("n: ");
-        double n = scanner.nextDouble();
-        double sum = 1;
-        for (double i = 2; i <= n; i++) {
-            sum += 1/i;
+        double[] numbers = {1, 2, 3, 4, 5};
+        double[] harmonic = new double[numbers.length];
+
+        for (int i = 0; i < numbers.length; i++) {
+            for (double j = 0; j < numbers[i]; j++) {
+                harmonic[i] += 1 / (j + 1);
+            }
         }
-        System.out.println("Harmonik ortalama: " + sum);
+        System.out.println(Arrays.toString(harmonic));
     }
 }
