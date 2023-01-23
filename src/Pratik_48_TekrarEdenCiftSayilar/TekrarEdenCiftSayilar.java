@@ -44,5 +44,27 @@ public class TekrarEdenCiftSayilar {
         // removing the extra empty inputs in cift[]
         int[] cift2 = Arrays.copyOfRange(cift, 0, count);
         System.out.println("Tekrar eden çift sayılar: " + Arrays.toString(cift2));
+
+
+        // -->
+        /* Another way
+            int[] list = {3, 7, 3, 3, 2, 0, 0, 9, 10, 21, 1, 33, 9, 1, 7};
+            int[] duplicate = new int[list.length];
+            int startIndex = 0;
+            for (int i = 0; i < list.length; i++) {
+                for (int j = 0; j < list.length; j++) {
+                    if ((i != j) && (list[i] == list[j]) && list[i] % 2 == 0) {  // tekrar eden çift sayılar
+                        if (!isFind(duplicate, list[i])) {
+                            duplicate[startIndex++] = list[i];
+                        }
+                        break;
+                    }
+                }
+            }
+            int[] newDuplicate = Arrays.copyOfRange(duplicate, 0, startIndex + 1);
+            for (int i : newDuplicate) {
+                System.out.print(i + " ");
+            }
+         */
     }
 }
