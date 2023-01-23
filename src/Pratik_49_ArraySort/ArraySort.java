@@ -1,4 +1,4 @@
-package Pratik_48_ArraySort;
+package Pratik_49_ArraySort;
 
 import java.util.Arrays;
 import java.util.Scanner;
