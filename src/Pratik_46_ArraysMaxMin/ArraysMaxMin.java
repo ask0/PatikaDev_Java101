@@ -46,5 +46,21 @@ public class ArraysMaxMin {
         System.out.println(n + "'den küçük en büyük: " + tmpK);
         System.out.println(n + "'den büyük en küçük: " + tmpB);
 
+
+        /* Another way
+            int[] arr = {1, 3, 5, 7, 9};
+            int bEnk = Integer.MAX_VALUE;
+            int kEnb = Integer.MIN_VALUE;
+            int n = 5;
+            for (int i : arr) {
+                if (i < n)
+                    if (kEnb < i)
+                        kEnb = i;
+                if (i > n)
+                    if (bEnk > i)
+                        bEnk = i;
+            }
+            System.out.println("küçük: " + kEnb + " büyük: " + bEnk);
+         */
     }
 }
