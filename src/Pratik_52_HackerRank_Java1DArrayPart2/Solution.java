@@ -1,4 +1,4 @@
-package Pratik_52_Java1DArrayPart2;
+package Pratik_52_HackerRank_Java1DArrayPart2;
 
 import java.util.Scanner;
 
