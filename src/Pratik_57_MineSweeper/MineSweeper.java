@@ -7,14 +7,11 @@ import java.util.Scanner;
 public class MineSweeper {
     int col;
     int row;
-
     MineSweeper(int row, int col) {
         this.col = col;
         this.row = row;
     }
-
     static Scanner scanner = new Scanner(System.in);
-
     int[][] createRandomMineMatrix() {
         Random random = new Random();
         int[][] mineMatrix = new int[this.row][this.col];
@@ -41,20 +38,17 @@ public class MineSweeper {
                         randomArray[count++] = checkRandom;
                     }
                 }
-
             }
         }
-
         // Sorting random indexes
         Arrays.sort(randomArray);
 
         /// print randomArray
-        for (int i = 0; i < count; i++) {
-            System.out.print(randomArray[i] + " ");
-        }
-        System.out.println("\n##################################################");
-
-
+//        System.out.println("Random Indexes: ");
+//        for (int i = 0; i < count; i++) {
+//            System.out.print(randomArray[i] + " ");
+//        }
+//        System.out.println("\n##################################################");
         // Puts randoms into matrix as 1
         count = 0;
         int index = 0;
@@ -75,17 +69,15 @@ public class MineSweeper {
         return mineMatrix;
     }
 
-
     void run() {
         int[][] mineMatrix = createRandomMineMatrix();
-        for (int i = 0; i < this.row; i++) {
-            for (int j = 0; j < this.col; j++) {
-                System.out.print(mineMatrix[i][j] + "\t");
-            }
-            System.out.println();
-        }
-
-        System.out.println("##################################################");
+//        for (int i = 0; i < this.row; i++) {
+//            for (int j = 0; j < this.col; j++) {
+//                System.out.print(mineMatrix[i][j] + "\t");
+//            }
+//            System.out.println();
+//        }
+        System.out.println("################# MineSweeper Game ################");
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
                 if (mineMatrix[i][j] == -1)
@@ -109,7 +101,7 @@ public class MineSweeper {
             System.out.print("Col: ");
             int c = scanner.nextInt();
             if (r < 0 || c < 0 || r > rows || c > cols) {
-                System.out.println("Wrong input. Try again.\n##################################################");
+                System.out.println("Wrong input. Try again.");
             } else {
                 // while (true) { // isWin
                 if (mineMatrix[r][c] == -1) {
