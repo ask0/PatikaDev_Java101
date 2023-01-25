@@ -45,16 +45,16 @@ public class MinerSweeper {
             }
         }
 
+        // Sorting random indexes
         Arrays.sort(randomArray);
-        /// print randomArray
 
+        /// print randomArray
         for (int i = 0; i < count; i++) {
             System.out.print(randomArray[i] + " ");
         }
         System.out.println();
 
 
-        // Sorting random indexes
         // Puts randoms into matrix as 1
         count = 0;
         int index = 0;
@@ -62,10 +62,13 @@ public class MinerSweeper {
             for (int j = 0; j < this.col; j++) {
                 if (count < randomArray.length) {
                     if (index == randomArray[count]) {
-                        mineMatrix[i][j] = 1;
+                        mineMatrix[i][j] = -1;
                         count++;
+                    } else {
+                        mineMatrix[i][j] = -5;
                     }
-                }
+                } else //if (count >= randomArray.length)
+                    mineMatrix[i][j] = -5;
                 index++;
             }
         }
@@ -85,7 +88,7 @@ public class MinerSweeper {
 
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
-                if (mineMatrix[i][j] == 1)
+                if (mineMatrix[i][j] == -1)
                     System.out.print("*\t");
                 else
                     System.out.print("-\t");
@@ -96,23 +99,143 @@ public class MinerSweeper {
         int rows = row - 1;
         int cols = col - 1;
         boolean isContinue = true;
+
+        int loopCounter = 0;
         while (isContinue) {
+         //   boolean isWin = true;
             System.out.println("Enter row and column between row: [0-" + rows + "] col: [0-" + cols + "]");
             System.out.print("Row: ");
             int r = scanner.nextInt();
             System.out.print("Col: ");
             int c = scanner.nextInt();
             if (r < 0 || c < 0 || r > rows || c > cols) {
-                System.out.println("Wrong input. Try again.");
+                System.out.println("Wrong input. Try again.\n##################################################");
             } else {
+               // while (true) { // isWin
+                    if (mineMatrix[r][c] == -1) {
+                        System.out.println("You've lost. Game over.");
+                        //isWin = false;
+                        isContinue = false;
+                    } else if (mineMatrix[r][c] == -5) {
+                        int neighbour = 0;
+                        if (r == 0 && c == 0) { // top left
+                            if (mineMatrix[r + 1][c] == -1)
+                                neighbour++;
+                            if (mineMatrix[r + 1][c + 1] == -1)
+                                neighbour++;
+                            if (mineMatrix[r][c + 1] == -1)
+                                neighbour++;
+                        } else if (r == row - 1 && c == 0) {  // bottom left
+                            if (mineMatrix[r - 1][c] == -1)
+                                neighbour++;
+                            if (mineMatrix[r][c + 1] == -1)
+                                neighbour++;
+                            if (mineMatrix[r - 1][c + 1] == -1)
+                                neighbour++;
+                        } else if (r == row - 1 && c == col - 1) {  // bottom right
+                            if (mineMatrix[r][c - 1] == -1)
+                                neighbour++;
+                            if (mineMatrix[r - 1][c] == -1)
+                                neighbour++;
+                            if (mineMatrix[r - 1][c - 1] == -1)
+                                neighbour++;
+                        } else if (r == 0 && c == col - 1) {  // top right
+                            if (mineMatrix[r][c - 1] == -1)
+                                neighbour++;
+                            if (mineMatrix[r + 1][c] == -1)
+                                neighbour++;
+                            if (mineMatrix[r + 1][c - 1] == -1)
+                                neighbour++;
+                        } else if (r == 0 && c < col - 1) {  // top-mid
+                            if (mineMatrix[r][c - 1] == -1)
+                                neighbour++;
+                            if (mineMatrix[r][c + 1] == -1)
+                                neighbour++;
+                            if (mineMatrix[r + 1][c - 1] == -1)
+                                neighbour++;
+                            if (mineMatrix[r + 1][c] == -1)
+                                neighbour++;
+                            if (mineMatrix[r + 1][c + 1] == -1)
+                                neighbour++;
+                        } else if (r == row - 1 && c > 0 && c < col - 1) {  // bottom-mid
+                            if (mineMatrix[r][c - 1] == -1)
+                                neighbour++;
+                            if (mineMatrix[r][c + 1] == -1)
+                                neighbour++;
+                            if (mineMatrix[r - 1][c - 1] == -1)
+                                neighbour++;
+                            if (mineMatrix[r - 1][c] == -1)
+                                neighbour++;
+                            if (mineMatrix[r - 1][c + 1] == -1)
+                                neighbour++;
+                        } else if (r > 0 && r < row - 1 && c == 0) {  // left-mid
+                            if (mineMatrix[r - 1][c] == -1)
+                                neighbour++;
+                            if (mineMatrix[r + 1][c] == -1)
+                                neighbour++;
+                            if (mineMatrix[r - 1][c + 1] == -1)
+                                neighbour++;
+                            if (mineMatrix[r][c + 1] == -1)
+                                neighbour++;
+                            if (mineMatrix[r + 1][c + 1] == -1)
+                                neighbour++;
+                        } else if (r > 0 && r < row - 1 && c == col - 1) {  // right-mid
+                            if (mineMatrix[r][c - 1] == -1)
+                                neighbour++;
+                            if (mineMatrix[r - 1][c - 1] == -1)
+                                neighbour++;
+                            if (mineMatrix[r + 1][c - 1] == -1)
+                                neighbour++;
+                            if (mineMatrix[r + 1][c] == -1)
+                                neighbour++;
+                            if (mineMatrix[r - 1][c] == -1)
+                                neighbour++;
+                        } else { // rest of the indexes
+                            if (mineMatrix[r - 1][c - 1] == -1)
+                                neighbour++;
+                            if (mineMatrix[r][c - 1] == -1)
+                                neighbour++;
+                            if (mineMatrix[r + 1][c - 1] == -1)
+                                neighbour++;
+                            if (mineMatrix[r - 1][c] == -1)
+                                neighbour++;
+                            if (mineMatrix[r + 1][c] == -1)
+                                neighbour++;
+                            if (mineMatrix[r - 1][c + 1] == -1)
+                                neighbour++;
+                            if (mineMatrix[r][c + 1] == -1)
+                                neighbour++;
+                            if (mineMatrix[r + 1][c + 1] == -1)
+                                neighbour++;
+                        }
 
+                        mineMatrix[r][c] = neighbour;
+                        for (int i = 0; i < row; i++) {
+                            for (int j = 0; j < col; j++) {
+                                if (mineMatrix[i][j] >= 0)
+                                    System.out.print(mineMatrix[i][j] + "\t");
+                                else System.out.print("-\t");
+                            }
+                            System.out.println();
+                        }
+
+
+                    }
+                    loopCounter++;
+                    //isWin = false;
+                    if (loopCounter == row * col - (row * col / 4)) {
+                        System.out.println("Congrats. You win!");
+                        isContinue = false;
+                    }
+                 //   break;
+               // }
             }
         }
     }
 
 
     public static void main(String[] args) {
-        MinerSweeper minerSweeper = new MinerSweeper(3, 6);
+        MinerSweeper minerSweeper = new MinerSweeper(4, 5);
         minerSweeper.run();
     }
 }
