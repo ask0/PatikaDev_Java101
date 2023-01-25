@@ -1,4 +1,4 @@
-# Mayın Tarlası
+# MineSweeper
 
 ---
 
